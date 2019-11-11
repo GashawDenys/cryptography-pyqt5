@@ -1,11 +1,12 @@
 import random
 import textwrap
+
 from MainWindow import Ui_MainWindow
 
 size = random.randint(3,5)
 n = random.randint(50,53)
 m = random.randint(300,400)
-some_str = 'dfgdfg'
+some_str = 'hello'
 
 def generateSuperIncreasingKnapsack(size):
 	first = random.randint(2, 2+size)
@@ -36,6 +37,16 @@ def checking_for_last_element(binary_str):
 	binary_str.append(new_string)
 	return binary_str
 
+def encryption(public_key, number_list):
+	result = []
+	for i in range(len(number_list)):
+		result.append(0)
+
+	for i in range(len(number_list)):
+		for j in range(len(public_key)):
+			result[i] += public_key[j] * number_list[i][j]
+	return result
+
 
 
 private_key = generateSuperIncreasingKnapsack(size)
@@ -49,9 +60,15 @@ print('Это бинарный текст', binary_str)
 binary_str = checking_for_last_element(binary_str)
 print('Это бинарный текст с проверенным последним элементом', binary_str)
 
-# new_list = [list(x) for x in binary_str]
+
+binary_list = [list(d) for d in binary_str]
+number_list = [[int(y) for y in x] for x in binary_list]
+print(number_list)
+# new_list = [list(x) for x in binary_str]s
 # print(new_list)
 
+encrypted_text = encryption(public_key, number_list)
+print("Зашифрованное сообщение", encrypted_text)
 
 # last_element = binary_str.pop()
 # print(last_element)
@@ -63,6 +80,3 @@ print('Это бинарный текст с проверенным послед
 # binary_str.append(new_string)
 # print("Окончательный список", binary_str)
 	
-	
-
-
