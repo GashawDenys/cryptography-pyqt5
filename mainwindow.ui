@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>585</width>
-    <height>494</height>
+    <width>658</width>
+    <height>609</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,16 +26,17 @@ QPushButton:hover{
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>80</x>
       <y>40</y>
-      <width>371</width>
-      <height>401</height>
+      <width>451</width>
+      <height>491</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">#textEdit{
 	background: grey;
 }
+
 </string>
     </property>
    </widget>
@@ -74,10 +75,10 @@ QPushButton:hover{
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>310</y>
+      <x>90</x>
+      <y>420</y>
       <width>121</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -93,15 +94,16 @@ border-radius: 20px;
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>310</y>
+      <x>390</x>
+      <y>420</y>
       <width>121</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: white;
-border-radius: 20px;</string>
+border-radius: 20px;
+</string>
     </property>
     <property name="text">
      <string>Разшифровать</string>
@@ -128,7 +130,7 @@ border-radius: 20px</string>
    <widget class="QToolButton" name="toolButton">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>270</x>
       <y>20</y>
       <width>71</width>
       <height>51</height>
@@ -151,7 +153,7 @@ border-radius: 20px</string>
       <x>160</x>
       <y>240</y>
       <width>281</width>
-      <height>31</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="text">
@@ -161,13 +163,30 @@ border-radius: 20px</string>
      <string>Результат</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>221</x>
+      <y>461</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+border-radius: 15px;</string>
+    </property>
+    <property name="text">
+     <string>Очистить поля</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>585</width>
+     <width>658</width>
      <height>22</height>
     </rect>
    </property>
