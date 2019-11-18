@@ -144,13 +144,14 @@ class Ui_MainWindow(object):
     def plain_text_to_binary(self):
         plain_text = self.lineEdit.text()
         binary_str = ''.join(format(ord(x), 'b') for x in plain_text)
+        print('Обычный текст в бинарном виде:', binary_str)
         binary_str = textwrap.wrap(binary_str, size)
         last_element = list(binary_str.pop())
         while len(last_element) < size:
             last_element.insert(0, '0')
         new_string = ''.join(last_element)
         binary_str.append(new_string)
-        print(binary_str)
+        print('Бинарный текст разделен на кол-во элементов ключа:', binary_str)
         return binary_str
 
     def type_convertation(self, public_key):
@@ -164,7 +165,6 @@ class Ui_MainWindow(object):
         binary_str = self.plain_text_to_binary()
         binary_list = [list(d) for d in binary_str]
         number_list = [[int(y) for y in x] for x in binary_list]
-        print(binary_list)
         result = []
         for i in range(len(number_list)):
             result.append(0)
